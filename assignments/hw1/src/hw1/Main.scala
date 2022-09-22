@@ -69,8 +69,8 @@ object Main {
    *
    * Find the first integer `n` which makes `pred(f^n(init))` True.
    *
-   * In other words, if pred(init), pred(f(init)), and pred(f(f(init))) is all False,
-   *   but pred(f(f(f(init)))) gives the first True value, then return 3.
+   * For example, if pred(init), pred(f(init)), and pred(f(f(init))) is all False,
+   *   and pred(f(f(f(init)))) gives the first True value, then return 3.
    * If pred(init) is True, return 0.
    *
    * f: repeating function
