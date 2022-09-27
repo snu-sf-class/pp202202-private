@@ -56,7 +56,23 @@ If you have any questions, please submit an issue to [pp202202 issue tracker](ht
 
 ## Submissions
 
-We are constructing a submission server. We will let you know when the server is ready. 
+[http://pp.kinetc.net:10000](http://pp.kinetc.net:10000)
+
+### How to submit
+
+Compress `src` folder and submit compressed zip file.
+
+**WARNING**: The structure of the submitted zip file must look like below. If it's not, the server will show you `COMPILE ERROR` or etc.
+
+```
+submit.zip
+|- src
+   |- hw1
+      |- Main.scala
+```
+
+
+
 
 
 
