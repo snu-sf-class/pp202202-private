@@ -7,8 +7,8 @@
 If you do not follow it, **your submission will not be graded.**
 
 1. Do not use the keyword `var`. Use `val` and `def` instead.
-2. From now on, you can use some classes in scala.collections.* (except scala.collections.mutable.*) 
-and basic APIs in String and Char classes. You can make your custom case classes.
+2. From now on, you can use some classes in scala.collections.* (except scala.collections.mutable.*). 
+   You can  make your custom case classes.
 
 Again, your score will be zero if you do not follow these rules.
 
