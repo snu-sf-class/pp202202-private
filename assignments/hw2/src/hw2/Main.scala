@@ -71,7 +71,7 @@ object Main {
    * Problem 2: Reversed Binary Representation (5 points each)
    *
    * Implement the basic operations of reversed binary representation (RBB).
-   * You should use `BNum` type from
+   * You should use the predefined `BNum` type from Data.scala file.
    *
    * RBB is one way to represent natural number through ADT.
    *
