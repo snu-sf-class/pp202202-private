@@ -26,8 +26,9 @@ object Main {
   /**
    * Problem 1: Structural subtype (5 points)
    *
-   * Find the common supertype of Ty1 and Ty2.
-   * i.e. `CommonTy >: Ty1 && CommonTy >: Ty2`
+   * Find the **least** (i.e. most specific) common supertype of Ty1 and Ty2.
+   *
+   *   `CommonTy >: Ty1 && CommonTy >: Ty2`
    *
    * We will check your answer by comparing it with our answer as follows:
    *
