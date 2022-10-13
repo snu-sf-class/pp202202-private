@@ -52,7 +52,7 @@ object Main {
 
       type Ty2 = {
         def apply: {val func: Func2; val e: E} => {val b: B; val e: E }
-        def function1: {val func: Func4} => {val c: C; val func: Func1 }
+        def function1: {val func: Func4} => {val c: C; val func: Func1}
         val a: A
         val c: C
         val d: D
@@ -81,7 +81,7 @@ object Main {
    * e.g.)
    * number 1 -> BHead
    * number 6 -> /binarize/ 110 (2) -> /reverse/ 011 -> /RBB/ B0(B1(BHead))
-   * number 11 -> /binarize/ 1011 (2) -> /reverse 1101 -> /RBB/ B1(B1(B0(BHead)))
+   * number 11 -> /binarize/ 1011 (2) -> /reverse/ 1101 -> /RBB/ B1(B1(B0(BHead)))
    **/
 
   /**
