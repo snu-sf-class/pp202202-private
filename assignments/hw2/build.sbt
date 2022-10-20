@@ -6,3 +6,5 @@ lazy val root = (project in file("."))
   .settings(
     name := "assignments"
   )
+
+libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.8"
