@@ -8,7 +8,7 @@ object Test extends App {
       if (b) println("O") else println("X")
     
     val mc = new Problem1.MyClass[Int, Boolean, Unit, Float, (Int, Int), (Int, Int, Int)]()
-    val typeTest = typeOf[Ty1]<:<typeOf[mc.CommonTy] && typeOf[Ty2]<:<typeOf[mc.CommonTy] && !(typeOf[Any]<:<typeOf[mc.CommonTy])
+    val typeTest = typeOf[mc.Ty1]<:<typeOf[mc.CommonTy] && typeOf[mc.Ty2]<:<typeOf[mc.CommonTy] && !(typeOf[Any]<:<typeOf[mc.CommonTy])
     
     print_result(typeTest)
 
