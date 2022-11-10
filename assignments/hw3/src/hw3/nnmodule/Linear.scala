@@ -14,7 +14,7 @@ class Linear(val weight: Matrix) extends NNModule {
       // TODO: return (weight * input) matrix x vector multiplication using `me`
       ???
     } else if (input.ndim == 2) {
-      // TODO: return (weight * matrix) matrix x matrix multiplication using `me`
+      // TODO: return (weight * input) matrix x matrix multiplication using `me`
       ???
     } else {
       // Batched matmul
