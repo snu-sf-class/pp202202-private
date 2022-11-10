@@ -11,12 +11,14 @@ If you do not follow it, **your submission will not be graded.**
 
 Target codes: `NaiveEngine.scala`, `Matrix.scala`, `NDArray.scala`, `StackedArray.scala`, `Vector.scala`,
 `Linear.scala`, `ReLU.scala`, `Sequential.scala`.
+
 You cannot modify the other codes except the above target codes.
 
 Again, your score will be zero if you do not follow these rules.
 
 TIP: You don't have to understand anything about neural networks.
-All you need to know is the way to multiply two matrices.
+
+All you need to know is the way to multiply two matrices. See the [wiki page](https://ko.wikipedia.org/wiki/행렬_곱셈)
 
 ## Grading 
 
