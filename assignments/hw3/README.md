@@ -16,7 +16,7 @@ You cannot modify the other codes except the above target codes.
 Again, your score will be zero if you do not follow these rules.
 
 TIP: You don't have to understand anything about neural networks.
-All you need to know is the way multiply two matrices.
+All you need to know is the way to multiply two matrices.
 
 ## Grading 
 
