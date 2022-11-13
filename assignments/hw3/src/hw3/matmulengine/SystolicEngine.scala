@@ -63,14 +63,8 @@ private final class SystolicArray(left: Matrix, right: Matrix) {
   private def sheeredLeft(idx: Int): Array[Float] = {
     val arr: Array[Float] = Array.fill(n)(0)
 
-    if (k + n - 1 > idx && idx >= k - 1) {
-      for (i <- 0 to stepN if (idx - (k - 1) + i) < n && i < k) {
-        arr(i) = left.getArr(idx - (k - 1) + i).get(i)
-      }
-    } else {
-      for (i <- 0 to stepN if (k - 1) + i < k && i < n) {
-        arr(i) = left.getArr(i).get((k - 1) + i)
-      }
+    for (i <- 0 until n if i <= idx && idx < i + k) {
+      arr(i) = left.getArr(i).get(i + k - 1 - idx)
     }
 
     arr
@@ -79,35 +73,27 @@ private final class SystolicArray(left: Matrix, right: Matrix) {
   private def sheeredUp(idx: Int): Array[Float] = {
     val arr: Array[Float] = Array.fill(m)(0)
 
-    if (k + m - 1 > idx && idx >= k - 1) {
-      for (i <- 0 to stepN if (idx - (k - 1) + i) < m && i < k) {
-        arr(i) = right.getArr(i).get(idx - (k - 1) + i)
-      }
-    } else {
-      for (i <- 0 to stepN if (k - 1) + i < k && i < m) {
-        arr(i) = right.getArr(idx - (k - 1) + i).get(i)
-      }
+    for (i <- 0 until m if i <= idx && idx < i + k) {
+      arr(i) = right.getArr(i + k - 1 - idx).get(i)
     }
 
     arr
   }
 
-  private val grids: Array[Array[Processor]] = Array.fill(n)(Array.fill(m)(new Processor))
-
   private def shiftRight(input: Array[Float]): Unit = {
-    for ((f, row) <- input.zip(grids)) {
+    for ((f, row) <- input.zip(grid)) {
       row(0).sendRight(f)
     }
   }
 
   private def shiftDown(input: Array[Float]): Unit = {
-    for ((f, col) <- input.zip(grids(0))) {
+    for ((f, col) <- input.zip(grid(0))) {
       col.sendDown(f)
     }
   }
 
   def run: Matrix = {
-    for (i <- (stepN - 1) to 0 by -1) {
+    for (i <- 0 until stepN) {
       shiftRight(sheeredLeft(i))
       shiftDown(sheeredUp(i))
       grid.foreach(_.foreach(_.step()))
