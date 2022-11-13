@@ -14,7 +14,7 @@ trait MatmulEngine {
    *
    * @param left N x K matrix
    * @param right K x M matrix
-   * @return K x M matrix
+   * @return N x M matrix
    */
   def matmul(left: Matrix, right: Matrix): Matrix
 }

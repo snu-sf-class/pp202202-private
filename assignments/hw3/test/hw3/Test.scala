@@ -11,11 +11,11 @@ object Test extends App {
 
     def rand(i: Int, j: Int): Matrix = Matrix(Array(i, j), Array.fill(i * j)(Math.random().toFloat % 1.0f))
     def params: Array[Matrix] = Array(
-        rand(784, 50),
-        rand(50, 20), rand(20, 50), rand(50, 50),
-        rand(50, 20), rand(20, 50), rand(50, 50),
-        rand(50, 20), rand(20, 50), rand(50, 50),
-        rand(50, 10)
+        rand(50, 784),
+        rand(20, 50), rand(50, 20), rand(50, 50),
+        rand(20, 50), rand(50, 20), rand(50, 50),
+        rand(20, 50), rand(50, 20), rand(50, 50),
+        rand(10, 50)
     )
 
     val net = new SimpleNet(params)

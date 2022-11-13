@@ -43,7 +43,7 @@ class SimpleNet(val weights: Array[Matrix]) extends NNModule {
   protected val tail: NNModule = Sequential(new LN(weights(10)), Softmax)
 
   def apply(input: NDArray): NDArray = {
-    val flat = if (input.ndim == 3) input.reshape(input.getShape(0), 768) else input.reshape(768)
+    val flat = if (input.ndim == 3) input.reshape(input.getShape(0), 784) else input.reshape(768)
 
     val x1 = head(flat)
     val x2 = ReLU(seq1._1(x1).add(seq1._2(x1)))
