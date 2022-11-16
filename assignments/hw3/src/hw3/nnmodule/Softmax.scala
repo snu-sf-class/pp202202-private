@@ -10,8 +10,8 @@ import hw3.ndarray.{Matrix, NDArray, StackedArray}
 object Softmax extends NNModule {
   def apply(input: NDArray): NDArray = {
     if (input.ndim == 1) {
-      val err = Math.pow(10, -7)
-      val exp = input.unaryOp(f => (Math.exp(f) + err).toFloat)
+      val max = input.reduceLeft[Float]((a, b) => if (a > b) a else b)
+      val exp = input.unaryOp(f => Math.exp(f - max).toFloat)
       val sum = exp.reduceLeft[Float](_ + _)
       exp.unaryOp(f => f / sum)
     } else if (input.ndim == 2) {
