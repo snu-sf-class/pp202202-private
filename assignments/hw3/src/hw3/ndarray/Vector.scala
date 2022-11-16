@@ -19,7 +19,7 @@ final class Vector(val values: Array[Float]) extends NDArray {
 
   def reshape(shape: Int*): NDArray = ???
 
-  def reduceLeft[T](f: (T, T) => T): T = ???
+  def reduceLeft(f: (Float, Float) => Float): NDArray = ???
 
   def unaryOp(f: Float => Float): NDArray = ???
 

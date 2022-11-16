@@ -75,7 +75,7 @@ trait NDArray {
    * @param f binary operator
    * @return `f(f(...(f(x0, x1), x2), ... xn)`
    */
-  def reduceLeft[T](f: (T, T) => T): T
+  def reduceLeft(f: (Float, Float) => Float): NDArray
 
   /**
    * Element-wise unary operation.

@@ -12,7 +12,7 @@ object Softmax extends NNModule {
     if (input.ndim == 1) {
       val err = Math.pow(10, -7)
       val exp = input.unaryOp(f => (Math.exp(f) + err).toFloat)
-      val sum = exp.reduceLeft[Float](_ + _)
+      val sum = exp.reduceLeft(_ + _)
       exp.unaryOp(f => f / sum)
     } else if (input.ndim == 2) {
       val length = input.getShape(0)
