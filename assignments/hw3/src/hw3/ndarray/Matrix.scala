@@ -21,7 +21,7 @@ final class Matrix(val values: Array[Vector]) extends NDArray {
 
   def reshape(shape: Int*): NDArray = ???
 
-  def reduceLeft(f: (Float, Float) => Float): NDArray = ???
+  def reduceLeft[T](f: (Float, Float) => Float): T = ???
 
   def unaryOp(f: Float => Float): NDArray = ???
 

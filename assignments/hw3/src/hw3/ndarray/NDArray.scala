@@ -73,9 +73,10 @@ trait NDArray {
    *  [[1, 2, 3]].reduceLeft(_ + _) = [1, 2, 3]
    *
    * @param f binary operator
+   * @tparam T NDArray (if this is Matrix or StackedArray) or Float (if this is Vector)
    * @return `f(f(...(f(x0, x1), x2), ... xn)`
    */
-  def reduceLeft(f: (Float, Float) => Float): NDArray
+  def reduceLeft[T](f: (Float, Float) => Float): T
 
   /**
    * Element-wise unary operation.
