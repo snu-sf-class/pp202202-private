@@ -66,15 +66,16 @@ trait NDArray {
   def reshape(shape: Int*): NDArray
 
   /**
-   * Apply a binary operator to all elements along the first axis.
+   * Apply an element-wise binary operator to all elements along the first axis.
    * Note that f can be non-associative.
    *
    * e.g) [[2, 3, 5], [3, 1, 0]].reduceLeft(_ + _) = [5, 4, 5]
    *  [[1, 2, 3]].reduceLeft(_ + _) = [1, 2, 3]
+   *  [2, 3, 4].reduceLeft(_ - _) = ((2 - 3) - 4) = -5
    *
    * @param f binary operator
-   * @tparam T NDArray (if this is Matrix or StackedArray) or Float (if this is Vector)
-   * @return `f(f(...(f(x0, x1), x2), ... xn)`
+   * @tparam T type of the inner element: NDArray (if this is Matrix or StackedArray) or Float (if this is Vector)
+   * @return see Seq.reduceLeft
    */
   def reduceLeft[T](f: (Float, Float) => Float): T
 
