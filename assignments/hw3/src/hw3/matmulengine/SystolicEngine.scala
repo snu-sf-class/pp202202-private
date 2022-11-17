@@ -44,7 +44,7 @@ private final class SystolicArray(left: Matrix, right: Matrix) {
   private val n = left.getShape(0)
   private val k = left.getShape(1)
   private val m = right.getShape(1)
-  private val stepN = (k - 1) + (if (n < m) m else n)
+  private val stepN = k + (if (n < m) m else n)
 
   private val grid = {
     val arr = Array.fill(n)(Array.fill(m)(new Processor))
