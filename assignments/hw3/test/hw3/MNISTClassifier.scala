@@ -14,8 +14,8 @@ object MNISTClassifier {
     val weights = mutable.ArrayDeque[Array[Array[Float]]]()
     val currWeight = mutable.ArrayDeque[Array[Float]] ()
 
-    for (line <- fn.getLines) {
-      val l = line.strip()
+    for (line <- fn.getLines()) {
+      val l = line.trim()
       if (l == "(") {
         currWeight.clear()
       } else if (l == ")") {

@@ -22,8 +22,11 @@ scalac -classpath classes/ -d classes/ \
        src/hw3/nnmodule/Softmax.scala \
        src/hw3/nnmodule/Sequential.scala \
 
-scalac -classpath classes/ -d classes/ src/hw3/ImageReader.scala
-scalac -classpath classes/ -d classes/ src/hw3/SimpleNet.scala
+scalac -classpath classes/ -d classes/ \
+       src/hw3/ImageReader.scala \
+       src/hw3/SimpleNet.scala
 
-scalac -classpath classes/ -d classes/ test/hw3/Test.scala
+scalac -classpath classes/ -d classes/ \
+       test/hw3/MNISTClassifier.scala \
+       test/hw3/Test.scala
 
