@@ -7,7 +7,7 @@ package hw4.value
  * You can use some JVM functions to implement it, such as:
  * java.lang.Float.floatToIntBits(yourFloat)
  * java.lang.Integer.toBinaryString(intBits)
- * java.lang.Long.paresLong(myString, 2).toInt
+ * java.lang.Long.parseLong(myString, 2).toInt
  * java.lang.Float.intBitsToFloat(intBits)
  *
  * See https://stackoverflow.com/questions/5157664/java-how-to-convert-a-string-of-binary-values-to-a-float-and-vice-versa
