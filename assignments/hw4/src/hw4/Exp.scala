@@ -32,7 +32,13 @@ case class Sub(left: Exp, right: Exp) extends Exp
 /** Multiplication */
 case class Mul(left: Exp, right: Exp) extends Exp
 
-/** Division. If the `right` value is 0, throw any Exception. */
+/** 
+ * Division.
+ *
+ * If the `right` value is 0, throw any Exception.
+ * If the two operands are integer, execute integer division. 
+ * Otherwise, execute float division.
+ */
 case class Div(left: Exp, right: Exp) extends Exp
 
 /**
