@@ -18,7 +18,7 @@ call scalac -classpath classes/ -d classes/ \
        src/hw3/nnmodule/SystolicLinear.scala \
        src/hw3/nnmodule/ReLU.scala \
        src/hw3/nnmodule/Softmax.scala \
-       src/hw3/nnmodule/Sequential.scala \
+       src/hw3/nnmodule/Sequential.scala
 
 call scalac -classpath classes/ -d classes/ \
        src/hw3/ImageReader.scala \
