@@ -12,7 +12,7 @@ call scalac -classpath classes/ -d classes/ \
       src/hw4/value/LazyValImpl.scala
 
 call scalac -classpath classes/ -d classes/ \
-      src/hw4/Exp.scala
+      src/hw4/Exp.scala \
       src/hw4/FnEvaluator.scala
 
 call scalac -classpath classes/ -d classes/ \
