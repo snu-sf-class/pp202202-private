@@ -14,7 +14,7 @@ scalac -classpath classes/ -d classes/ \
        src/hw4/value/LazyValImpl.scala
 
 scalac -classpath classes/ -d classes/ \
-       src/hw4/Exp.scala \ 
+       src/hw4/Exp.scala \
        src/hw4/FnEvaluator.scala
 
 scalac -classpath classes/ -d classes/ \
