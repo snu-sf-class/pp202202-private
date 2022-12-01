@@ -51,8 +51,7 @@ to [issue tracker](https://github.com/snu-sf-class/pp202202/issues).
 
 ## Restrictions
 
-- Do not use keyword `var` (except in `EVLazyVal`). Use `val` and `def` instead.
-    - To implement laziness, you should exploit `var evaluated` from `LVLazy`
+- Do not use keyword `var. Use `val` and `def` instead.
 - You cannot use mutable data structures like `Java.Array`
 - You cannot use type casting methods like `asInstanceOf` or `isInstanceOf`
 
