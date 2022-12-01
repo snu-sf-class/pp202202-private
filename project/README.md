@@ -1,6 +1,6 @@
 # Project: Programming Principles, SNU 4190.210
 
-Refer to the [manual](pp-proj.pdf), make complete four scripts below.
+Refer to the [manual](doc.pdf), make complete four scripts below.
 
 - [ExprInterpreter](src/main/scala/pp202202/project/impl/ExprInterpreter.scala)
 - [LazyOpsImpl](src/main/scala/pp202202/project/impl/LazyOpsImpl.scala)
